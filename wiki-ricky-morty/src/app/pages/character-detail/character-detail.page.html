@@ -1,0 +1,54 @@
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+  <div class="glass-content ion-padding">
+
+    <div class="ion-text-center ion-padding-top" *ngIf="character">
+      <ion-avatar>
+        <img [src]="character.image" />
+      </ion-avatar>
+      <h1>{{character.name}}</h1>
+      <div>{{character.status}}</div>
+
+
+      <ion-item>
+        <ion-icon slot="start" name="locatin-outline"></ion-icon>
+        <ion-label><p>First appearance:<strong> {{character.origin.name}}</strong></p></ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="locatin-outline"></ion-icon>
+        <ion-label><p>Last appearance:<strong> {{character.location.name}}</strong></p></ion-label>
+      </ion-item>
+
+      <ion-item class="ion-margin-top">
+        <ion-icon slot="start" name="videocam-outline"></ion-icon>
+        <ion-label>chapters in which it appears</ion-label>
+        <ion-icon slot="end" name="chevron-down"></ion-icon>
+      </ion-item>
+
+      <ion-grid >
+        <ion-row>
+          <ion-col *ngFor="let e of episodes" size-lg="4" size-md="6" size="12">
+
+            <ion-card>
+              <ion-card-content class="ion-text-start">
+                <strong>{{e.name}}</strong>
+                <p>{{e.episode}}</p>
+                <p>Air date episode: {{e.air_date}}</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

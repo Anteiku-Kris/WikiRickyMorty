@@ -1,0 +1,27 @@
+//Estilos barra de busqueda
+ion-searchbar{
+    max-width: 350px;
+    color: #ffff;
+    align-items: center;
+    --brackground: rgba(7, 7, 7, 0.2);
+}
+
+//Estilos nombre de personaje
+.name{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+//Estilo de card de personaje
+
+ion-card:hover{
+    cursor: pointer;
+    background-color: rgba(7, 7, 7, 0.485);;
+}
+
+//Estilos para los avatares
+ion-avatar{
+    width: 100px;
+    height: 100px;
+    align-self: top;
+    margin: auto;
+}
